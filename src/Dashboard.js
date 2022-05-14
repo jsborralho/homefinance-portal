@@ -18,7 +18,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
+import Chart from './charts/Chart';
+import BarChart from './charts/BarChart';
+import PieChart from './charts/PieChart';
+
+import Overall from './Overall'
+
+
 import Deposits from './Deposits';
 import Orders from './Orders';
 
@@ -155,6 +161,8 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
+              {/* Overall */}
+              <Overall />
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
